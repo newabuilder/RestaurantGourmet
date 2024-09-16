@@ -2,10 +2,148 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    Jose Neyver Waldo Quinto
+    
+    <header class="header">
+        <nav class="navbar">
+            <a href="#"> Home </a>
+            <a href="#"> About us </a>
+            <a href="#"> Plates </a>
+            <a href="#"> Contact </a>
+        </nav>
+
+        <form action="#" class="search"> 
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class='bx bx-search-alt-2' ></i></button>
+        </form>
+
+    </header>
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+        
+            <h2 class="logo"><i class='bx bxl-sass'></i>Restarant Gourmet</h2>
+
+            <div class="text-sci">
+                <h2>¡Bienvenido!<br> <span>A nuestro sitio web</span> </h2>
+
+                <p>Si ya tienes una cuenta por favor inicia sesion aquí</p>
+
+                <div class="social-icons">
+                    <a href="#"> <i class='bx bxl-tiktok' ></i> </a>
+                    <a href="#"> <i class='bx bxl-twitter' ></i> </a>
+                    <a href="#"> <i class='bx bxl-facebook-circle' ></i> </a>
+                    <a href="#"> <i class='bx bxl-instagram' ></i> </a>
+
+
+                </div>
+
+            </div>
+        
+        </div>
+       
+
+        <div class="logreg-box">
+            <div class="form-box login">
+            <form action="#">
+                <h2>Iniciar Sesión</h2>
+
+                <div class="input-box">
+                  
+                    <span class="icon"> <i class='bx bxs-envelope'></i> </span>
+                    <input type="email" required>
+                    <label>Email</label>
+
+                </div>
+
+
+                <div class="input-box">
+                  
+                    <span class="icon"> <i class='bx bxs-lock-alt' ></i> </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                    
+                </div>
+
+                <div class="remember-forgot">
+                    <label> <input type="checkbox"> Recuerdame </label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+
+                </div>    
+
+                <button type="submit" class="btn"> Iniciar sesion </button>
+
+                <div class="login-registrer">
+                    <p>¿Aún no tienes una cuenta?
+                        <a href="#" class="register-link"> Regístrate aquí </a>
+                    </p>
+
+                    
+                </div>
+
+            </form>
+
+            </div>
+
+            <div class="form-box register">
+                <form action="#">
+                    <h2>Registrate Aquí</h2>
+
+                    <div class="input-box">
+                      
+                        <span class="icon"> <i class='bx bxs-user' ></i> </span>
+                        <input type="text" required>
+                        <label>Name</label>
+    
+                    </div>
+    
+                    <div class="input-box">
+                      
+                        <span class="icon"> <i class='bx bxs-envelope'></i> </span>
+                        <input type="email" required>
+                        <label>Email</label>
+    
+                    </div>
+    
+    
+                    <div class="input-box">
+                      
+                        <span class="icon"> <i class='bx bxs-lock-alt' ></i> </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                        
+                    </div>
+    
+                    <div class="remember-forgot">
+                        <label> <input type="checkbox"> Acepto los térmios y condiciones </label>
+                       
+    
+                    </div>    
+    
+                    <button type="submit" class="btn"> Registrarse </button>
+    
+                    <div class="login-registrer">
+                        <p>¿Ya tienes una cuenta?
+                            <a href="#" class="login-link"> Inicia Sesión </a>
+                        </p>
+    
+                        
+                    </div>
+    
+                </form>
+    
+                </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
