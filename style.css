@@ -1,69 +1,77 @@
+/* Importa la fuente de Google */
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 
+/* Estilo global para todos los elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fuente usada en el proyecto */
 }
 
-body{
-    background: #020410;
+/* Estilo para el fondo de la página */
+body {
+    background: #020410; /* Color de fondo oscuro */
 }
 
+/* Estilo para el encabezado fijo */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 25px 12.5%;
-    background: transparent;
+    background: transparent; /* Fondo transparente */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaciado entre elementos */
     align-items: center;
-    z-index: 100;
+    z-index: 100; /* Mantener el encabezado sobre otros elementos */
 }
 
-.navbar a{
+/* Estilo para los enlaces del menú de navegación */
+.navbar a {
     position: relative;
     font-size: 16px;
-    color: #e4e4e4;
+    color: #e4e4e4; /* Color de texto claro */
     text-decoration: none;
     font-weight: 500;
     margin-right: 30px;
-
 }
 
-.navbar a::after{
+/* Estilo para el subrayado de los enlaces del menú al pasar el ratón */
+.navbar a::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -6px;
     width: 100%;
     height: 2px;
-    background: #e4e4e4;
+    background: #e4e4e4; /* Color del subrayado */
     border-radius: 5px;
     transform: translateY(10px);
     opacity: 0;
     transition: .5s;
 }
 
-.navbar a:hover::after{
+/* Efecto al pasar el ratón sobre los enlaces del menú */
+.navbar a:hover::after {
     transform: translateY(0);
     opacity: 1;
 }
 
+/* Estilo para el formulario de búsqueda */
 .search {
     width: 250px;
     height: 45px;
     background: transparent;
-    border: 2px solid #e4e4e4;
+    border: 2px solid #e4e4e4; /* Borde del formulario */
     border-radius: 6px;
     display: flex;
     align-items: center;
 }
 
-.search input{
+/* Estilo para el campo de entrada del formulario de búsqueda */
+.search input {
     width: 100%;
     background: transparent;
     border: none;
@@ -73,11 +81,13 @@ body{
     padding-left: 10px;
 }
 
-.search input::placeholder{
+/* Estilo para el texto de marcador de posición en el campo de entrada */
+.search input::placeholder {
     color: #e4e4e4;
 }
 
-.search button{
+/* Estilo para el botón de búsqueda */
+.search button {
     width: 40px;
     height: 100%;
     background: transparent;
@@ -86,24 +96,26 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.search button i{
+/* Estilo para el ícono dentro del botón de búsqueda */
+.search button i {
     font-size: 22px;
     color: #e4e4e4;
 }
 
-.background{
+/* Estilo para el fondo de la página principal */
+.background {
     width: 100%;
     height: 100vh;
-    background: url('background.jpg') no repeat;
+    background: url('background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(10px);
+    filter: blur(10px); /* Desenfoque de fondo */
 }
 
-.container{
+/* Estilo para el contenedor principal de contenido */
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -117,7 +129,8 @@ body{
     margin-top: 20px;
 }
 
-.container .content{
+/* Estilo para el contenido dentro del contenedor */
+.container .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -131,46 +144,53 @@ body{
     flex-direction: column;
 }
 
-.content .logo{
-    font-size: 30px ;
+/* Estilo para el logo dentro del contenido */
+.content .logo {
+    font-size: 30px;
 }
 
-.text-sci h2{
+/* Estilo para el texto de bienvenida */
+.text-sci h2 {
     font-size: 40px;
     line-height: 1;
 }
 
-.text-sci h2 span{
+/* Tamaño del texto en el título secundario */
+.text-sci h2 span {
     font-size: 25px;
 }
 
-.text-sci p{
+/* Estilo para el párrafo de bienvenida */
+.text-sci p {
     font-size: 16px;
     margin: 20px 0;
 }
 
-.social-icons a i{
+/* Estilo para los íconos de redes sociales */
+.social-icons a i {
     font-size: 22px;
     color: #e4e4e4;
     margin-right: 10px;
     transition: .5s ease;
 }
 
-.social-icons a:hover i{
+/* Efecto al pasar el ratón sobre los íconos de redes sociales */
+.social-icons a:hover i {
     transform: scale(1.2);
 }
 
-.container .logreg-box{
+/* Estilo para el contenedor de formularios de inicio de sesión y registro */
+.container .logreg-box {
     position: absolute;
     top: 0;
     right: 0;
     width: calc(100% - 58%);
     height: 100%;
     overflow: hidden;
-   
 }
 
-.logreg-box .form-box{
+/* Estilo para cada formulario dentro del contenedor de formularios */
+.logreg-box .form-box {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -178,41 +198,46 @@ body{
     width: 100%;
     height: 100%;
     background: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px); /* Desenfoque de fondo para el formulario */
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px; 
-    color: #e4e4e4; 
+    color: #e4e4e4;
 }
 
-.logreg-box .form-box.login{
+/* Estilo para el formulario de inicio de sesión */
+.logreg-box .form-box.login {
     transform: translateX(0);
     transition: transform .6s ease;
     transition-delay: .7s;
 }
 
-.logreg-box.active .form-box.login{
+/* Movimiento del formulario de inicio de sesión cuando se activa el registro */
+.logreg-box.active .form-box.login {
     transform: translateX(430px);
     transition-delay: 0s;
 }
 
-.logreg-box .form-box.register{
+/* Estilo para el formulario de registro */
+.logreg-box .form-box.register {
     transform: translateX(430px);
     transition: transform .5s ease;
     transition-delay: 0s;
-
 }
 
-.logreg-box.active .form-box.register{
+/* Movimiento del formulario de registro cuando se activa */
+.logreg-box.active .form-box.register {
     transform: translateX(0);
     transition: transform .7s;
 }
 
-.form-box h2{
+/* Estilo para los encabezados dentro del formulario */
+.form-box h2 {
     font-size: 32px;
     text-align: center;
 }
 
-.form-box .input-box{
+/* Estilo para los campos de entrada */
+.form-box .input-box {
     position: relative;
     width: 340px;
     height: 50px;
@@ -220,19 +245,21 @@ body{
     margin: 30px 0;
 }
 
-.input-box input{
+/* Estilo para los campos de entrada de texto */
+.input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
     font-size: 16px;
-    color:#e4e4e4;
+    color: #e4e4e4;
     font-weight: 500;
     padding-right: 28px;
 }
 
-.input-box label{
+/* Estilo para las etiquetas dentro de los campos de entrada */
+.input-box label {
     position: absolute;
     top: 50%;
     left: 0;
@@ -242,18 +269,23 @@ body{
     pointer-events: none;
     transition: .5s ease;
 }
+
+/* Movimiento de la etiqueta al enfocar el campo de entrada */
 .input-box input:focus~label,
 .input-box input:valid~label {
     top: -5px;
 }
 
-.input-box .icon{
+/* Estilo para el ícono dentro del campo de entrada */
+.input-box .icon {
     position: absolute;
     top: 13px;
     right: 0;
     font-size: 19px;
-    
-}.form-box .remember-forgot{
+}
+
+/* Estilo para la sección de recordar y olvidar contraseña */
+.form-box .remember-forgot {
     font-size: 14.5px;
     font-weight: 500;
     margin: -15px 0 15px;
@@ -261,21 +293,24 @@ body{
     justify-content: space-between;
 }
 
-.remember-forgot label input{
+/* Estilo para la casilla de verificación y enlaces */
+.remember-forgot label input {
     accent-color: #e4e4e4;
     margin-right: 3px;
 }
 
-.remember-forgot a{
+.remember-forgot a {
     color: #e4e4e4;
     text-decoration: none;
 }
 
-.remember-forgot a:hover{
+/* Efecto al pasar el ratón sobre el enlace de "Olvidaste tu contraseña?" */
+.remember-forgot a:hover {
     text-decoration: underline;
 }
 
-.btn{
+/* Estilo para el botón de enviar */
+.btn {
     width: 100%;
     height: 45px;
     background: #e4e4e4;
@@ -289,19 +324,22 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
-.form-box .login-registrer{
+/* Estilo para el texto de inicio de sesión y registro */
+.form-box .login-registrer {
     font-size: 14.5px;
     font-weight: 500;
     text-align: center;
     margin-top: 25px;
 }
 
-.login-registrer p a{
+/* Estilo para los enlaces dentro de la sección de "Inicia sesión / Regístrate" */
+.login-registrer p a {
     color: #e4e4e4;
     font-weight: 600;
     text-decoration: none;
 }
 
-.login-registrer p a:hover{
-text-decoration: underline;
+/* Efecto al pasar el ratón sobre los enlaces */
+.login-registrer p a:hover {
+    text-decoration: underline;
 }

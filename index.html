@@ -5,145 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
+    <!-- Enlace al archivo CSS para estilos -->
     <link rel="stylesheet" href="style.css">
+    <!-- Enlace a los íconos Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 <body>
     
     <header class="header">
         <nav class="navbar">
+            <!-- Menú de navegación -->
             <a href="#"> Home </a>
             <a href="#"> About us </a>
             <a href="#"> Plates </a>
             <a href="#"> Contact </a>
         </nav>
 
+        <!-- Formulario de búsqueda -->
         <form action="#" class="search"> 
             <input type="text" placeholder="Search...">
             <button type="submit"><i class='bx bx-search-alt-2' ></i></button>
         </form>
-
     </header>
+
+    <!-- Fondo decorativo -->
     <div class="background"></div>
+
     <div class="container">
         <div class="content">
-        
+            <!-- Logo del restaurante -->
             <h2 class="logo"><i class='bx bxl-sass'></i>Restarant Gourmet</h2>
 
             <div class="text-sci">
+                <!-- Mensaje de bienvenida -->
                 <h2>¡Bienvenido!<br> <span>A los mejores restaurantes</span> </h2>
-
                 <p>Ingresa para que puedas disfrutar de un excelente servicio</p>
 
+                <!-- Íconos de redes sociales -->
                 <div class="social-icons">
                     <a href="#"> <i class='bx bxl-tiktok' ></i> </a>
                     <a href="#"> <i class='bx bxl-twitter' ></i> </a>
                     <a href="#"> <i class='bx bxl-facebook-circle' ></i> </a>
                     <a href="#"> <i class='bx bxl-instagram' ></i> </a>
-
-
                 </div>
-
             </div>
-        
         </div>
-       
 
+        <!-- Sección de login/registro -->
         <div class="logreg-box">
+
+            <!-- Formulario de login -->
             <div class="form-box login">
             <form action="#">
                 <h2>Iniciar Sesión</h2>
 
                 <div class="input-box">
-                  
+                    <!-- Campo de email -->
                     <span class="icon"> <i class='bx bxs-envelope'></i> </span>
                     <input type="email" required>
                     <label>Email</label>
-
                 </div>
 
-
                 <div class="input-box">
-                  
+                    <!-- Campo de contraseña -->
                     <span class="icon"> <i class='bx bxs-lock-alt' ></i> </span>
                     <input type="password" required>
                     <label>Password</label>
-                    
                 </div>
 
                 <div class="remember-forgot">
+                    <!-- Checkbox para recordar usuario y enlace de olvido de contraseña -->
                     <label> <input type="checkbox"> Recuerdame </label>
                     <a href="#">¿Olvidaste tu contraseña?</a>
-
                 </div>    
 
+                <!-- Botón para enviar formulario de login -->
                 <button type="submit" class="btn"> Iniciar sesion </button>
 
+                <!-- Enlace para registrarse -->
                 <div class="login-registrer">
                     <p>¿Aún no tienes una cuenta?
                         <a href="#" class="register-link"> Regístrate aquí </a>
                     </p>
-
-                    
                 </div>
-
             </form>
-
             </div>
 
+            <!-- Formulario de registro -->
             <div class="form-box register">
                 <form action="#">
                     <h2>Registrate Aquí</h2>
 
                     <div class="input-box">
-                      
+                        <!-- Campo de nombre -->
                         <span class="icon"> <i class='bx bxs-user' ></i> </span>
                         <input type="text" required>
                         <label>Name</label>
-    
                     </div>
-    
+
                     <div class="input-box">
-                      
+                        <!-- Campo de email -->
                         <span class="icon"> <i class='bx bxs-envelope'></i> </span>
                         <input type="email" required>
                         <label>Email</label>
-    
                     </div>
-    
-    
+
                     <div class="input-box">
-                      
+                        <!-- Campo de contraseña -->
                         <span class="icon"> <i class='bx bxs-lock-alt' ></i> </span>
                         <input type="password" required>
                         <label>Password</label>
-                        
                     </div>
-    
+
                     <div class="remember-forgot">
+                        <!-- Checkbox para aceptar términos -->
                         <label> <input type="checkbox"> Acepto los térmios y condiciones </label>
-                       
-    
                     </div>    
-    
+
+                    <!-- Botón para enviar formulario de registro -->
                     <button type="submit" class="btn"> Registrarse </button>
-    
+
+                    <!-- Enlace para iniciar sesión si ya tiene cuenta -->
                     <div class="login-registrer">
                         <p>¿Ya tienes una cuenta?
                             <a href="#" class="login-link"> Inicia Sesión </a>
                         </p>
-    
-                        
                     </div>
-    
                 </form>
-    
-                </div>
+            </div>
         </div>
     </div>
 
-
+    <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
