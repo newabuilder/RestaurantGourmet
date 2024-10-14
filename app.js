@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const port = 3000; 
-const db = require('./DataAcces/database.js'); // Importa la conexión a la base de datos
+const db = require('./DataAccess/database.js'); // Importa la conexión a la base de datos
 
 // Middleware para analizar el cuerpo de las solicitudes JSON
 app.use(express.json());
