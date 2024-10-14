@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html"> Home </a>
+            <a href="#"> About us </a>
+            <a href="#"> Plates </a>
+            <a href="#"> Contact </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="logreg-box">
+            <div class="form-box register">
+                <form id="registerForm" action="/register" method="POST">
+                    <h2>Registrarse</h2>
+
+                    <div class="input-box">
+                        <span class="icon"> <i class='bx bxs-user'></i> </span>
+                        <input type="text" id="registerName" name="name" required>
+                        <label>Nombre</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"> <i class='bx bxs-envelope'></i> </span>
+                        <input type="email" id="registerEmail" name="email" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"> <i class='bx bxs-lock-alt'></i> </span>
+                        <input type="password" id="registerPassword" name="password" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label> <input type="checkbox"> Acepto los términos y condiciones </label>
+                    </div>
+
+                    <button type="submit" class="btn"> Registrarse </button>
+
+                    <div class="login-registrer">
+                        <p>¿Ya tienes una cuenta?
+                            <a href="login.html" class="login-link"> Inicia sesión </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

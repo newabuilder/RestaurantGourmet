@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Estilos básicos para el contenedor */
+        #content {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" onclick="showContent('home')"> Home </a>
+            <a href="#" onclick="showContent('about')"> About us </a>
+            <a href="#" onclick="showContent('plates')"> Plates </a>
+            <a href="#" onclick="showContent('contact')"> Contact </a>
+            <a href="login.html"> Iniciar Sesión </a>
+            <a href="register.html"> Registrarse </a>
+        </nav>
+
+        <form action="#" class="search"> 
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class='bx bx-search-alt-2'></i></button>
+        </form>
+    </header>
+
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="content">
+            <h2 class="logo"><i class='bx bxl-sass'></i>Restarant Gourmet</h2>
+
+            <div class="text-sci">
+                <h2>¡Bienvenido!<br> <span>A los mejores restaurantes</span> </h2>
+                <p>Ingresa para que puedas disfrutar de un excelente servicio</p>
+
+                <div class="social-icons">
+                    <a href="#"> <i class='bx bxl-tiktok'></i> </a>
+                    <a href="#"> <i class='bx bxl-twitter'></i> </a>
+                    <a href="#"> <i class='bx bxl-facebook-circle'></i> </a>
+                    <a href="#"> <i class='bx bxl-instagram'></i> </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor donde se cargará el contenido dinámico -->
+        <div id="content">
+            <h2>Welcome to Restaurante Gourmet</h2>
+            <p>Click on the menu to view more information.</p>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar el contenido basado en el enlace que se haga clic
+        function showContent(section) {
+            const contentDiv = document.getElementById('content');
+            
+            // Cambia el contenido basado en la sección seleccionada
+            if (section === 'home') {
+                contentDiv.innerHTML = `
+                    <h2>Home</h2>
+                    <p>Welcome to the homepage of Restaurante Gourmet! Explore our best dishes and services.</p>
+                `;
+            } else if (section === 'about') {
+                contentDiv.innerHTML = `
+                    <h2>About Us</h2>
+                    <p>We are a fine dining restaurant offering the best gourmet dishes. Our chefs are world-renowned.</p>
+                `;
+            } else if (section === 'plates') {
+                contentDiv.innerHTML = `
+                    <h2>Our Plates</h2>
+                    <p>Discover our exclusive dishes, carefully crafted with the freshest ingredients.</p>
+                `;
+            } else if (section === 'contact') {
+                contentDiv.innerHTML = `
+                    <h2>Contact Us</h2>
+                    <p>You can reach us via email at contact@restaurant.com or call us at (123) 456-7890.</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

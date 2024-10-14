@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html"> Home </a>
+            <a href="#"> About us </a>
+            <a href="#"> Plates </a>
+            <a href="#"> Contact </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="logreg-box">
+            <div class="form-box login">
+                <form id="loginForm" action="/login" method="POST">
+                    <h2>Iniciar Sesión</h2>
+
+                    <div class="input-box">
+                        <span class="icon"> <i class='bx bxs-envelope'></i> </span>
+                        <input type="email" id="loginEmail" name="email" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"> <i class='bx bxs-lock-alt'></i> </span>
+                        <input type="password" id="loginPassword" name="password" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label> <input type="checkbox"> Recuérdame </label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn"> Iniciar sesión </button>
+
+                    <div class="login-registrer">
+                        <p>¿Aún no tienes una cuenta?
+                            <a href="register.html" class="register-link"> Regístrate aquí </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
