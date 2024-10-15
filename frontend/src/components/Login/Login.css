@@ -1,0 +1,347 @@
+/* Importa la fuente de Google */
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+import .background.jpg
+
+
+/* Estilo global para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fuente usada en el proyecto */
+}
+
+/* Estilo para el fondo de la página */
+body {
+    background: #020410; /* Color de fondo oscuro */
+}
+
+/* Estilo para el encabezado fijo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12.5%;
+    background: transparent; /* Fondo transparente */
+    display: flex;
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center;
+    z-index: 100; /* Mantener el encabezado sobre otros elementos */
+}
+
+/* Estilo para los enlaces del menú de navegación */
+.navbar a {
+    position: relative;
+    font-size: 16px;
+    color: #e4e4e4; /* Color de texto claro */
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+/* Estilo para el subrayado de los enlaces del menú al pasar el ratón */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #e4e4e4; /* Color del subrayado */
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+
+/* Efecto al pasar el ratón sobre los enlaces del menú */
+.navbar a:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Estilo para el formulario de búsqueda */
+.search {
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #e4e4e4; /* Borde del formulario */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para el campo de entrada del formulario de búsqueda */
+.search input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding-left: 10px;
+}
+
+/* Estilo para el texto de marcador de posición en el campo de entrada */
+.search input::placeholder {
+    color: #e4e4e4;
+}
+
+/* Estilo para el botón de búsqueda */
+.search button {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para el ícono dentro del botón de búsqueda */
+.search button i {
+    font-size: 22px;
+    color: #e4e4e4;
+}
+
+/* Estilo para el fondo de la página principal */
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Desenfoque de fondo */
+}
+
+/* Estilo para el contenedor principal de contenido */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 500px;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo para el contenido dentro del contenedor */
+.container .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background: transparent;
+    padding: 80px;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Estilo para el logo dentro del contenido */
+.content .logo {
+    font-size: 30px;
+}
+
+/* Estilo para el texto de bienvenida */
+.text-sci h2 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+/* Tamaño del texto en el título secundario */
+.text-sci h2 span {
+    font-size: 25px;
+}
+
+/* Estilo para el párrafo de bienvenida */
+.text-sci p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-icons a i {
+    font-size: 22px;
+    color: #e4e4e4;
+    margin-right: 10px;
+    transition: .5s ease;
+}
+
+/* Efecto al pasar el ratón sobre los íconos de redes sociales */
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+/* Estilo para el contenedor de formularios de inicio de sesión y registro */
+.container .logreg-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Estilo para cada formulario dentro del contenedor de formularios */
+.logreg-box .form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px); /* Desenfoque de fondo para el formulario */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    color: #e4e4e4;
+}
+
+/* Estilo para el formulario de inicio de sesión */
+.logreg-box .form-box.login {
+    transform: translateX(0);
+    transition: transform .6s ease;
+    transition-delay: .7s;
+}
+
+/* Movimiento del formulario de inicio de sesión cuando se activa el registro */
+.logreg-box.active .form-box.login {
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+
+/* Estilo para el formulario de registro */
+.logreg-box .form-box.register {
+    transform: translateX(430px);
+    transition: transform .5s ease;
+    transition-delay: 0s;
+}
+
+/* Movimiento del formulario de registro cuando se activa */
+.logreg-box.active .form-box.register {
+    transform: translateX(0);
+    transition: transform .7s;
+}
+
+/* Estilo para los encabezados dentro del formulario */
+.form-box h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Estilo para los campos de entrada */
+.form-box .input-box {
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #e4e4e4;
+    margin: 30px 0;
+}
+
+/* Estilo para los campos de entrada de texto */
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    padding-right: 28px;
+}
+
+/* Estilo para las etiquetas dentro de los campos de entrada */
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+/* Movimiento de la etiqueta al enfocar el campo de entrada */
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+/* Estilo para el ícono dentro del campo de entrada */
+.input-box .icon {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+
+/* Estilo para la sección de recordar y olvidar contraseña */
+.form-box .remember-forgot {
+    font-size: 14.5px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para la casilla de verificación y enlaces */
+.remember-forgot label input {
+    accent-color: #e4e4e4;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #e4e4e4;
+    text-decoration: none;
+}
+
+/* Efecto al pasar el ratón sobre el enlace de "Olvidaste tu contraseña?" */
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el botón de enviar */
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #e4e4e4;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+/* Estilo para el texto de inicio de sesión y registro */
+.form-box .login-registrer {
+    font-size: 14.5px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Estilo para los enlaces dentro de la sección de "Inicia sesión / Regístrate" */
+.login-registrer p a {
+    color: #e4e4e4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+.login-registrer p a:hover {
+    text-decoration: underline;
+}
