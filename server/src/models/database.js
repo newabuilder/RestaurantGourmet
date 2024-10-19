@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
     port: 33917
 });
 
-/*/ Conectar a la base de datos
+// Conectar a la base de datos
 connection.connect((err) => {
     if (err) {
         console.error('Error de conexión: ' + err.stack);
@@ -18,5 +18,5 @@ connection.connect((err) => {
     }
     console.log('Conectado a la base de datos como ID ' + connection.threadId);
 });
-/*/
+
 module.exports = connection;
