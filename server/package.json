@@ -2,8 +2,10 @@
   "name": "restaurantgourmet",
   "version": "1.0.0",
   "main": "src/app.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon app.js"
+    "dev": "node --watch src/app.js",
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",

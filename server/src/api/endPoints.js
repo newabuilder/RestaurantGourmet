@@ -1,10 +1,14 @@
-const express = require ('express');
-const router = express.Router();
-const {ping} = require('../controllers/pingController')
-const {login} = require('../controllers/loginController')
+// Importar el módulo express
+import express from 'express'
 
-router.get('/ping',ping);
+// Importar los controladores
 
-router.post('/login',login)
+import { login } from '../controllers/loginController.js'
+const router = express.Router()
 
-module.exports = router;
+// Definir las rutas
+
+router.post('/login', login)
+
+// Exportar el router
+export default router

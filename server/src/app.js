@@ -1,32 +1,32 @@
-    // Importar el módulo express
-    const express = require('express');
-    const path = require('path');
-    const app = express();
-    const port =  3000;
-    const db = require('./models/database.js'); // Importa la conexión a la base de datos
-    const routes = require ('./api/endPoints.js');
-    const cors = require('cors');
+// Importar modulos necesarios
+import express from 'express';
+import { PORT } from './config.js';
+import path from 'path';
+import connection from './models/database.js'; // Importa la conexión a la base de datos
+import routes from './api/endPoints.js';
+import cors from 'cors';    
 
 
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: true }));
-    app.use(cors({
-        origin: [ "http://localhost:5173"],
-        method: ["GET", "POST"]
-    }));  
-
-    //rutas
-    app.use('/', routes); 
+const app = express();
 
 
-    //Manejo de errores
-    app.use((err, req, res, next) => {
-        console.error(err.stack);
-        res.status(500).send('¡Algo salió mal!');
-    })
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors({
+    origin: ["http://localhost:5173"],
+    methods: ["GET", "POST"]
+}));
 
-    // Iniciar el servidor
-    app.listen(port, () => {
-        console.log(`Servidor escuchando en el puerto ${port}`);
-    });
+// Rutas
+app.use('/', routes);
 
+// Manejo de errores
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('¡Algo salió mal!');
+});
+
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
