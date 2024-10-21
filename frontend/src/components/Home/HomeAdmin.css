@@ -1,0 +1,25 @@
+/* Home.css */
+
+body {
+    background-color: #ffffff; /* Fondo blanco */
+  }
+  
+  .home-container {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333; /* Texto oscuro */
+  }
+  
+  .home-container h1 {
+    color: #ffffff; /* Texto oscuro */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .home-container p {
+    color: #666; /* Texto gris */
+    font-size: 1.2rem;
+  }
+  

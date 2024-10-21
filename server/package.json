@@ -4,8 +4,7 @@
   "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/app.js",
-    "start": "nodemon src/app.js"
+    "dev": "node --watch src/app.js"
   },
   "keywords": [],
   "author": "",
