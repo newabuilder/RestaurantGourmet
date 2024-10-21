@@ -1,7 +1,6 @@
 import {createRoot} from 'react-dom/client';
 import {BrowserRouter as Router} from 'react-router-dom';
-import Main
- from './components/Main/Main';
+import Main from './components/Main/Main';
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 

@@ -40,7 +40,7 @@ const Main = () => {
         console.log('Rol después de login:', userRole);
 
         // Redirigir según el rol
-        if (userRole === 'admin') {
+        if (userRole === 'administrador') {
             navigate('/admin');
         } else if (userRole === 'usuario') { // Asegúrate de que el rol coincida con lo que envías
             navigate('/user');
@@ -57,7 +57,7 @@ const Main = () => {
     return (
         <>
             {isLoggedIn ? (
-                role === 'admin' ? <HomeAdmin onLogout={handleLogout} /> : <HomeUser onLogout={handleLogout} />
+                role === 'administrador' ? <HomeAdmin onLogout={handleLogout} /> : <HomeUser onLogout={handleLogout} />
             ) : (
                 <Login onLogin={handleLogin} />
             )}

@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs'
 import connection from '../models/database.js'
 import crypto from 'crypto'
 
@@ -18,27 +19,26 @@ export class UserRepository {
     if (!/[0-9]/.test(password)) throw new Error('Password must contain at least one number')
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) throw new Error('Password must contain at least one special character')
 
-    // 3. Asegurarse que el username no exista
-    const query = 'SELECT * FROM usuarios WHERE username = ?'
+    // Hash de la contraseña
+    const saltRounds = 10 // Ajusta según tus necesidades
+    const hashedPassword = await bcrypt.hash(password, saltRounds)
+
+    // Insertar nuevo usuario
+    const insertQuery = 'INSERT INTO usuarios (id, email, contraseña) VALUES (?, ?, ?)'
+    const values = [crypto.randomUUID(), email, hashedPassword]
+
     return new Promise((resolve, reject) => {
-      connection.query(query, [email], (err, results) => {
-        if (err) {
-          return reject(err)
-        }
-        if (results.length > 0) {
-          return reject(new Error('Username already exists'))
-        }
-
-        const id = crypto.randomUUID()
-
-        // 4. Insertar el nuevo usuario
-        const insertQuery = 'INSERT INTO usuarios (id, email, contraseña) VALUES (?, ?, ?)'
-        connection.query(insertQuery, [id, email, password], (insertErr, insertResult) => {
-          if (insertErr) {
-            return reject(insertErr)
+      connection.query(insertQuery, values, (error, results) => {
+        if (error) {
+          console.error('Error al crear el usuario:', error)
+          if (error.code === 'ER_DUP_ENTRY') {
+            reject(new Error('El correo electrónico ya está en uso'))
+          } else {
+            reject(new Error('Error al crear el usuario'))
           }
-          resolve(id)
-        })
+        } else {
+          resolve(results.insertId)
+        }
       })
     })
   }
